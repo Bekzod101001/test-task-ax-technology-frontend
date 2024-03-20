@@ -107,7 +107,6 @@ watch([sort, search], () => {
   <div class="posts">
     <div class="posts__header">
       <h2 class="posts__header__title">Posts</h2>
-      {{posts}} {{pending}}
       <div class="posts__header__params">
         <div class="posts__header__sort">
           <v-select

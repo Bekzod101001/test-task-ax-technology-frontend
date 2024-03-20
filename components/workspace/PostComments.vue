@@ -31,7 +31,6 @@ function getLastRecordElement() {
 }
 
 function observeLastElement() {
-  console.log(lastRecordObserver);
   if(!lastRecordObserver) return
 
   const lastRecordElement = getLastRecordElement();
