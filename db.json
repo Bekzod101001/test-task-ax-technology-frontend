@@ -1,0 +1,214 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "title": "Common Mistakes to Avoid When Flipping Houses",
+      "views": 623,
+      "featuredImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Thinking of flipping houses for profit? Learn about common mistakes to steer clear of.",
+      "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 5,
+      "title": "How to Maximize Rental Property Income",
+      "views": 453,
+      "featuredImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Discover strategies to optimize your rental property income and increase profitability.",
+      "body": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 6,
+      "title": "Navigating the Home-Buying Process: A Step-by-Step Guide",
+      "views": 345,
+      "featuredImage": "https://plus.unsplash.com/premium_photo-1661963885635-2b428cedce28?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Confused about buying a home? Follow this comprehensive guide to navigate the process smoothly.",
+      "body": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 7,
+      "title": "Investment Property Financing Options: Pros and Cons",
+      "views": 789,
+      "featuredImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Explore different financing options for investment properties and weigh their pros and cons.",
+      "body": "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 8,
+      "title": "The Role of Real Estate Agents in the Digital Age",
+      "views": 567,
+      "featuredImage": "https://images.unsplash.com/photo-1546412414-8035e1776c9a?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Learn how real estate agents are adapting to the digital era and leveraging technology.",
+      "body": "Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 9,
+      "title": "Tips for Negotiating Commercial Lease Agreements",
+      "views": 901,
+      "featuredImage": "https://images.unsplash.com/photo-1640877268187-2fa6b2ed7a5f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Negotiating a commercial lease? Here are some valuable tips to help you get the best deal.",
+      "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 10,
+      "title": "Creating an Effective Rental Property Marketing Strategy",
+      "views": 234,
+      "featuredImage": "https://source.unsplash.com/3PnWPw5vPx4",
+      "description": "Attracting tenants to your rental property requires a solid marketing strategy. Learn how to create one.",
+      "body": "Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 11,
+      "title": "Understanding Property Management: Key Responsibilities",
+      "views": 876,
+      "featuredImage": "https://source.unsplash.com/YR22prTyFPk",
+      "description": "Explore the essential responsibilities of property management and how they impact property owners.",
+      "body": "Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 12,
+      "title": "The Impact of Demographics on Real Estate Markets",
+      "views": 321,
+      "featuredImage": "https://source.unsplash.com/hbRr2TfqRk4",
+      "description": "Demographic shifts can significantly influence real estate markets. Learn more about their impact.",
+      "body": "Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 13,
+      "title": "Real Estate Investment Strategies for Beginners",
+      "views": 567,
+      "featuredImage": "https://source.unsplash.com/vlEeGwR5vQg",
+      "description": "New to real estate investing? Discover beginner-friendly strategies to start building wealth.",
+      "body": "Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 14,
+      "title": "Tips for Selling Your Home in a Competitive Market",
+      "views": 789,
+      "featuredImage": "https://source.unsplash.com/LvEaBqC6RCw",
+      "description": "Selling a home in a competitive market can be challenging. Here are some tips to help you succeed.",
+      "body": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+    },
+    {
+      "id": 15,
+      "title": "Investing in Real Estate vs. Stocks: Pros and Cons",
+      "views": 1023,
+      "featuredImage": "https://source.unsplash.com/fvlMmGmFllo",
+      "description": "Trying to decide between real estate and stocks? Compare the pros and cons of each investment.",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": 16,
+      "title": "The Importance of Home Inspections Before Buying",
+      "views": 754,
+      "featuredImage": "https://source.unsplash.com/9-rVjq7noCo",
+      "description": "Don't skip the home inspection! Discover why it's crucial before finalizing a home purchase.",
+      "body": "Dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 17,
+      "title": "Tips for Finding Off-Market Properties",
+      "views": 896,
+      "featuredImage": "https://source.unsplash.com/kd0CThj3HR0",
+      "description": "Looking for exclusive deals? Learn how to find off-market properties for investment.",
+      "body": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 18,
+      "title": "The Rise of Virtual Real Estate Tours",
+      "views": 623,
+      "featuredImage": "https://source.unsplash.com/evlkOfkMBb4",
+      "description": "Explore the growing trend of virtual real estate tours and their benefits for buyers and sellers.",
+      "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 19,
+      "title": "Tips for Investing in Vacation Rental Properties",
+      "views": 453,
+      "featuredImage": "https://source.unsplash.com/zM6YH1E82xc",
+      "description": "Thinking about investing in vacation rentals? Here are some tips to ensure success in this niche market.",
+      "body": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "id": 20,
+      "title": "Real Estate Tax Deductions Every Investor Should Know",
+      "views": 345,
+      "featuredImage": "https://source.unsplash.com/oe8UWQsKCrE",
+      "description": "Maximize your tax savings with these essential real estate tax deductions for investors.",
+      "body": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "It's like an avalanche",
+      "fullName": "Bekzod Bobokhonov",
+      "postId": 4
+    },
+    {
+      "id": 2,
+      "body": "Forfeit the game before somebody else takes you out of the frame and puts your name to shame",
+      "fullName": "Gustavo Cerati",
+      "postId": 4
+    },
+    {
+      "id": 3,
+      "body": "One day the butterfly will emerge from the cocoon",
+      "fullName": "Frankie Knuckles",
+      "postId": 4
+    },
+    {
+      "id": 4,
+      "body": "The only way to do great work is to love what you do",
+      "fullName": "Steve Jobs",
+      "postId": 4
+    },
+    {
+      "id": 5,
+      "body": "Success is not final, failure is not fatal: It is the courage to continue that counts",
+      "fullName": "Winston Churchill",
+      "postId": 4
+    },
+    {
+      "id": 6,
+      "body": "The only impossible journey is the one you never begin",
+      "fullName": "Tony Robbins",
+      "postId": 4
+    },
+    {
+      "id": 7,
+      "body": "Life is what happens when you're busy making other plans",
+      "fullName": "John Lennon",
+      "postId": 4
+    },
+    {
+      "id": 8,
+      "body": "In the end, it's not the years in your life that count. It's the life in your years",
+      "fullName": "Abraham Lincoln",
+      "postId": 4
+    },
+    {
+      "id": 9,
+      "body": "The greatest glory in living lies not in never falling, but in rising every time we fall",
+      "fullName": "Nelson Mandela",
+      "postId": 4
+    },
+    {
+      "id": 10,
+      "body": "Believe you can and you're halfway there",
+      "fullName": "Theodore Roosevelt",
+      "postId": 4
+    },
+    {
+      "id": 11,
+      "body": "It does not matter how slowly you go as long as you do not stop",
+      "fullName": "Confucius",
+      "postId": 4
+    },
+    {
+      "id": 12,
+      "body": "You miss 100% of the shots you don't take",
+      "fullName": "Wayne Gretzky",
+      "postId": 4
+    }
+  ]
+}
