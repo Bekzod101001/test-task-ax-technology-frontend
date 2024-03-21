@@ -13,12 +13,10 @@ const props = defineProps<Props>();
       width="100%"
       :to="`/posts/${post.id}`"
     >
-        <v-img
+        <lazy-nuxt-img
           :src="post.featuredImage"
-          height="200"
-          cover
+          class="post-card__image"
         />
-
         <div class="post-card__text-content">
           <v-card-title class="post-card__title">
             {{ post.title }}
@@ -41,6 +39,7 @@ const props = defineProps<Props>();
   &__image {
     object-fit: cover;
     height: 200px;
+    width: 100%;
   }
   &__text-content {
     padding: 15px;

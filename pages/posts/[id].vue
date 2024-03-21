@@ -30,10 +30,9 @@ const {
 
     <post-single-skeleton v-if="pending"/>
     <template v-else>
-      <v-img
+      <nuxt-img
+          class="post__image"
           :src="post.featuredImage"
-          height="400"
-          cover
       />
 
       <h2 class="post__title">{{ post.title }}</h2>
@@ -57,6 +56,12 @@ const {
 <style lang="scss">
 .post {
   padding: 60px 0;
+  &__image {
+    width: 100%;
+    max-height: 500px;
+    object-position: contain;
+    background-color: #363636;
+  }
   &__back-btn {
     display: flex;
     align-items: center;
