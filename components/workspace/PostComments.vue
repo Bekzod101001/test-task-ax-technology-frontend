@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type PostEntity from "~/types/post.entity";
-import AppIntersectionWrapper from "~/components/ui/AppIntersectionWrapper.vue";
 import {parseLinkHeaderAndGetLastPage} from "~/utils/json-api-utils";
 import CommentEntity from "~/types/comment.entity";
+import AppScrollPaginationWrapper from "~/components/ui/AppScrollPaginationWrapper.vue";
 
 interface Props {
     post: PostEntity;
@@ -19,24 +19,28 @@ const search: Ref<string> = useDebouncedRef('', 500, () => {
     comments.value = [];
     isFullyLoaded.value = false;
 
-    observeLastElement();
     getComments();
 
 });
 
-let lastRecordObserver: IntersectionObserver | null = null;
+function getCommentsApi(params: {
+  postId: number;
+  _page: number;
+  _limit: number;
+  fullName_like?: string;
+}) {
+  const url = new URL(`${import.meta.env.VITE_API_URL}/comments`);
 
-function getLastRecordElement() {
-  return document.querySelector('.post-comments__item:last-child');
-}
+  const searchParams = {
+    postId: params.postId.toString(),
+    _page: params._page.toString(),
+    _limit: params._limit.toString(),
+    ...(params.fullName_like ? { fullName_like: params.fullName_like } : {}),
+  };
+  url.search = new URLSearchParams(searchParams).toString();
 
-function observeLastElement() {
-  if(!lastRecordObserver) return
-
-  const lastRecordElement = getLastRecordElement();
-  if (lastRecordElement) {
-    lastRecordObserver.observe(lastRecordElement);
-  }
+  // TODO - implement fetch & useFetch wrapper functions
+  return fetch(url);
 }
 
 function getComments() {
@@ -44,7 +48,14 @@ function getComments() {
 
   isLoading.value = true;
 
-  fetch(`${import.meta.env.VITE_API_URL}/comments?postId=${props.post.id}&_page=${activePage.value}&_limit=5&fullName_like=${search.value}`)
+  const params = {
+    postId: props.post.id,
+    _page: activePage.value,
+    _limit: 5,
+    fullName_like: search.value,
+  }
+
+  getCommentsApi(params)
       .then(async (res) => {
         lastPage.value = parseLinkHeaderAndGetLastPage(res.headers.get('link'));
 
@@ -61,27 +72,16 @@ function getComments() {
 
 }
 
+function getMoreComments() {
+  if(activePage.value < lastPage.value) {
+    activePage.value++;
+  }
+  getComments();
+}
 
 onMounted(async () => {
   await getComments();
 
-  lastRecordObserver = new IntersectionObserver(async (entries) => {
-    const lastCard = entries[0];
-    console.log(lastCard);
-    if (!lastCard.isIntersecting) return;
-
-    await getComments();
-
-    if(lastRecordObserver) {
-      lastRecordObserver.unobserve(lastCard.target);
-    }
-
-    if (activePage.value <= lastPage.value) {
-      observeLastElement();
-    }
-  });
-
-  observeLastElement();
 });
 </script>
 
@@ -103,27 +103,34 @@ onMounted(async () => {
         variant="tonal"
         text="No comments yet."
     />
-
-    <div class="post-comments__list">
-      <v-card
-          class="post-comments__item"
-          v-for="(comment, index) in comments"
-          :key="index"
+    <client-only>
+      <app-scroll-pagination-wrapper
+        :active-page="activePage"
+        :last-page="lastPage"
+        :callback="getMoreComments"
+        class="post-comments__list"
       >
-        <v-card-title>
-          {{ comment.fullName }}
-        </v-card-title>
-        <v-card-text class="mb-0">
-          {{ comment.body }}
-        </v-card-text>
-      </v-card>
+        <v-card
+            class="post-comments__item"
+            v-for="(comment, index) in comments"
+            :key="index"
+        >
+          <v-card-title>
+            {{ comment.fullName }}
+          </v-card-title>
+          <v-card-text class="mb-0">
+            {{ comment.body }}
+          </v-card-text>
+        </v-card>
 
-    </div>
+      </app-scroll-pagination-wrapper>
+    </client-only>
 
     <template v-if="isLoading">
       <v-skeleton-loader
           type="heading,text@2"
           v-for="i in 5"
+          class="post-comments__item"
           :key="i"
       />
     </template>
