@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type PostEntity from "~/types/post.entity.js";
 import PostSingleSkeleton from "~/components/workspace/PostSingleSkeleton.vue";
-import AppIntersectionWrapper from "~/components/ui/AppIntersectionWrapper.vue";
 import PostComments from "~/components/workspace/PostComments.vue";
 
 const route = useRoute();
