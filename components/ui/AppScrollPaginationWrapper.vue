@@ -16,6 +16,7 @@ interface Props {
   callback: () => void;
 }
 
+const emits = defineEmits(['lastItemObserve']);
 const { callback } = defineProps<Props>();
 
 const trigger = ref<HTMLElement | null>(null);
@@ -24,7 +25,7 @@ const lastRecordObserver = new IntersectionObserver(async (entries) => {
   const lastItem = entries[0];
   if (!lastItem.isIntersecting) return;
 
-  callback();
+  emits('lastItemObserve');
 });
 
 onMounted(() => {

@@ -39,7 +39,7 @@ function getCommentsApi(params: {
   };
   url.search = new URLSearchParams(searchParams).toString();
 
-  // TODO - implement fetch & useFetch wrapper functions
+  // TODO - implement fetch & useFetch wrapper as separate reusable functions
   return fetch(url);
 }
 
@@ -62,6 +62,7 @@ function getComments() {
         if(activePage.value === lastPage.value) {
           isFullyLoaded.value = true;
         }
+
         const data: CommentEntity[] = await res.json();
         comments.value = [...comments.value, ...data];
         return res;
@@ -107,7 +108,7 @@ onMounted(async () => {
       <app-scroll-pagination-wrapper
         :active-page="activePage"
         :last-page="lastPage"
-        :callback="getMoreComments"
+        @last-item-observe="getMoreComments"
         class="post-comments__list"
       >
         <v-card
