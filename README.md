@@ -1,75 +1,48 @@
-# Nuxt 3 Minimal Starter
+# Тестовое задание на роль фронтенд-разработчика AX TECHNOLOGY (Nuxt 3)
+
+Как запустить проект:
+1) склонировать проект
+2) docker build -t bekzod-frontend-test-task . && docker run -p 3055:3000 -d bekzod-frontend-test-task
+3) открыть http://localhost:3055
+
+
+## Причемания к выполненному заданию:
+1) .env файл включен в проект для более простого развертывания, в реальном проекте он должен быть исключен из проекта и добавлен в CI/CD пайплайн
+2) json-server выгружен на внешний сервер http://207.231.109.17:3001
+3) Все пункты описании в тестовом задании выполнены
+
+## Описание задачи
+
+Тестовое задание
+Напишите простой одностраничный Блог на Vue.js
+
+Тех задание
+Взять данные отсюда, использовать документацию.
+Сделать список с пагинацией с загрузкой N-количество постов.
+Сделать life search (добавлять query параметр c ключём 'q') по постам и отдельную страницу поста.
+
+Задание с плюсом:
+На странице поста вывести комментарии(данного поста) с постепенной загрузкой по скролу.
+Life search комментария по пользователю(добавлять query параметр c ключём 'q').
+Сортировку постов по заголовку.
+Использовать Nuxt3
+
+Спецификация
+В следующем списке, перечислены основные моменты:
+Требование:
+- Запрещается грузить сразу все данные;
+- Использовать Composition API;
+- Минимальное количество зависимостей - будет плюсом;
+- Единый Code Style в проекте;
+- Использование TypeScript;
+- Запрещается игнорировать TS ошибки // @ts-ignore
+- Бандлер Vite;
+- Допускается использование UI библиотек (“Quasar”, “Naiveui”, etc);
+- Не использовать axios
+
+Результаты
+Разместите исходный код приложения на (GitHub.com, GitLab.com, Bitbucket.org, etc) в публичном репозитории. Также ссылка на live demo для ознакомления и тестирования.
+
+Примечание: вместо live demo, допускается докеризация проекта для локального воспроизведения веб приложения.
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
