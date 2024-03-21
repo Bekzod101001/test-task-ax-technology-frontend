@@ -79,13 +79,8 @@ const {
   pending,
 } = useFetch<PostEntity[]>(`${import.meta.env.VITE_API_URL}/posts`, {
   query: computedQuery,
-  async onResponse({ request, response, options }) {
-    console.log(response);
+  async onResponse({ response }) {
     lastPage.value = parseLinkHeaderAndGetLastPage(response.headers.get('Link'));
-    console.log(lastPage.value);
-  },
-  async onResponseError({ request, response, options }) {
-    console.log(response);
   },
   default: () => [],
   watch: [activePage, perPage, sort, search],
