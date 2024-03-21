@@ -21,7 +21,6 @@ const { callback } = defineProps<Props>();
 const trigger = ref<HTMLElement | null>(null);
 
 const lastRecordObserver = new IntersectionObserver(async (entries) => {
-  console.log(entries);
   const lastItem = entries[0];
   if (!lastItem.isIntersecting) return;
 

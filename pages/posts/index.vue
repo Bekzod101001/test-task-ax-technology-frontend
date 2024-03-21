@@ -2,9 +2,6 @@
 
 import type PostEntity from "~/types/post.entity";
 import PostCard from "~/components/workspace/PostCard.vue";
-import PaginatedItems from "~/types/paginated-items";
-import paginatedItemsSkeleton from "~/constants/paginated-items-skeleton";
-import {deepClone} from "~/utils/utils";
 import {parseLinkHeaderAndGetLastPage} from "~/utils/json-api-utils";
 import {Ref} from "vue";
 import AppPagination from "~/components/ui/AppPagination.vue";
