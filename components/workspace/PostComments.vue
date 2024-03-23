@@ -3,6 +3,7 @@ import type PostEntity from "~/types/post.entity";
 import {parseLinkHeaderAndGetLastPage} from "~/utils/json-api-utils";
 import CommentEntity from "~/types/comment.entity";
 import AppScrollPaginationWrapper from "~/components/ui/AppScrollPaginationWrapper.vue";
+import {Ref} from "vue";
 
 interface Props {
     post: PostEntity;
@@ -104,28 +105,24 @@ onMounted(async () => {
         variant="tonal"
         text="No comments yet."
     />
-    <client-only>
-      <app-scroll-pagination-wrapper
-        :active-page="activePage"
-        :last-page="lastPage"
+    <app-scroll-pagination-wrapper
         @last-item-observe="getMoreComments"
         class="post-comments__list"
+    >
+      <v-card
+          class="post-comments__item"
+          v-for="(comment, index) in comments"
+          :key="index"
       >
-        <v-card
-            class="post-comments__item"
-            v-for="(comment, index) in comments"
-            :key="index"
-        >
-          <v-card-title>
-            {{ comment.fullName }}
-          </v-card-title>
-          <v-card-text class="mb-0">
-            {{ comment.body }}
-          </v-card-text>
-        </v-card>
+        <v-card-title>
+          {{ comment.fullName }}
+        </v-card-title>
+        <v-card-text class="mb-0">
+          {{ comment.body }}
+        </v-card-text>
+      </v-card>
 
-      </app-scroll-pagination-wrapper>
-    </client-only>
+    </app-scroll-pagination-wrapper>
 
     <template v-if="isLoading">
       <v-skeleton-loader
