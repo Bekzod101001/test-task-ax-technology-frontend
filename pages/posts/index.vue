@@ -148,7 +148,7 @@ watch([sort, search], () => {
         v-for="post in posts"
         :key="post.id"
       >
-        <post-card :post="post" />
+        <post-card :post="post" class="posts__item" />
       </v-col>
     </v-row>
     <v-alert
@@ -178,6 +178,11 @@ watch([sort, search], () => {
 <style lang="scss">
 .posts {
   padding: 60px 0;
+  &__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   &__row {
     &_loading {
       opacity: 0.5;
