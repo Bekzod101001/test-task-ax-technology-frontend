@@ -15,13 +15,18 @@ const activePage: Ref<number> = ref(1);
 const lastPage: Ref<number> = ref(1);
 const isFullyLoaded: Ref<boolean> = ref(false);
 const comments: Ref<CommentEntity[]> = ref([]);
-const search: Ref<string> = useDebouncedRef('', 500, () => {
+
+const route = useRoute();
+const router = useRouter();
+const savedSearchInQuery = route.query.q as string ?? '';
+const search: Ref<string> = useDebouncedRef(savedSearchInQuery, 500, () => {
+    router.push({
+      query: { q: search.value },
+    });
     activePage.value = 1;
     comments.value = [];
     isFullyLoaded.value = false;
-
     getComments();
-
 });
 
 function getCommentsApi(params: {
@@ -93,13 +98,13 @@ onMounted(async () => {
     <v-text-field
         class="post-comments__search"
         v-model="search"
-        label="Search"
+        label="Search by full name"
         outlined
         variant="solo"
         append-inner-icon="mdi-magnify"
     />
     <v-alert
-        v-if="isFullyLoaded && comments.length === 0"
+        v-if="!isLoading && comments.length === 0"
         type="info"
         class="post-comments__no-records"
         variant="tonal"
